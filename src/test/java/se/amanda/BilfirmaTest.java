@@ -1,8 +1,8 @@
 package se.amanda;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.testng.Assert;
 
 import se.amanda.models.Bil;
 import se.amanda.models.BilFirma;
@@ -23,13 +23,13 @@ public class BilfirmaTest {
     @DisplayName("Lägg till bil till utbudet")
     @Test
     public void testAddedCar() {
-        Assert.assertTrue(bilFirma.getBilar().get(0).equals(new Bil("Blue", "Volvo")));
+        Assertions.assertTrue(bilFirma.getBilar().get(0).equals(new Bil("Blue", "Volvo")));
     }
 
     @DisplayName("Ta bort bil från utbudet")
     @Test
     public void testIfCarSold() {
         bilFirma.sellCar(bilFirma.getBilar().get(0));
-        Assert.assertFalse(bilFirma.getBilar().contains(new Bil("Blue", "Volvo")));
+        Assertions.assertFalse(bilFirma.getBilar().contains(new Bil("Blue", "Volvo")));
     }
 }
