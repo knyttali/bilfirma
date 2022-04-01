@@ -17,7 +17,7 @@ public class WebTest {
 
         WebElement searchBox = driver.findElement(By.name("r"));
 
-        searchBox.sendKeys("abc230"); 
+        searchBox.sendKeys("abc230");
         searchBox.submit();
 
         Thread.sleep(3 * 1000);
