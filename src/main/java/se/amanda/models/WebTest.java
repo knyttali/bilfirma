@@ -11,13 +11,13 @@ public class WebTest {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver  = new ChromeDriver();
-        driver.get("https://biluppgifter.se/"); //navigering till adress
+        driver.get("https://biluppgifter.se/");
 
         Thread.sleep(3 * 1000);
 
         WebElement searchBox = driver.findElement(By.name("r"));
 
-        searchBox.sendKeys("abc230"); //skriver in i search
+        searchBox.sendKeys("abc230"); 
         searchBox.submit();
 
         Thread.sleep(3 * 1000);
